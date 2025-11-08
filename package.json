@@ -35,17 +35,17 @@
   ],
   "author": {
     "name": "Ayushman Mishra",
-    "url": "https://github.com/ayushmanmishra"
+    "url": "https://github.com/Ayushman88"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayushmanmishra/toon.git"
+    "url": "git+https://github.com/Ayushman88/toon.git"
   },
   "bugs": {
-    "url": "https://github.com/ayushmanmishra/toon/issues"
+    "url": "https://github.com/Ayushman88/toon/issues"
   },
-  "homepage": "https://github.com/ayushmanmishra/toon#readme",
+  "homepage": "https://github.com/Ayushman88/toon#readme",
   "engines": {
     "node": ">=14.0.0"
   },

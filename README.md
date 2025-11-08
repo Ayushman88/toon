@@ -569,6 +569,6 @@ TOON is designed with the goal of making LLM interactions more efficient and cos
 
 **Made with ❤️ for the LLM community**
 
-[Report Bug](https://github.com/ayushmanmishra/toon/issues) · [Request Feature](https://github.com/ayushmanmishra/toon/issues) · [Documentation](./spec/TOON.md) · [npm Package](https://www.npmjs.com/package/@ayushmanmishra/toon)
+[Report Bug](https://github.com/Ayushman88/toon/issues) · [Request Feature](https://github.com/Ayushman88/toon/issues) · [Documentation](./spec/TOON.md) · [npm Package](https://www.npmjs.com/package/@ayushmanmishra/toon)
 
 </div>
