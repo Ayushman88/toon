@@ -15,6 +15,8 @@
 
 ---
 
+> **Note**: This is an independent implementation of a TOON-like format. There is also an [official TOON format](https://github.com/toon-format/toon) with a different specification. This package (`@ayushmanmishra/toon`) uses a different syntax optimized for different use cases.
+
 ## 🎯 What is TOON?
 
 **TOON (Token-Oriented Object Notation)** is a compact data serialization format specifically engineered to minimize token usage when passing structured data to Large Language Models. By eliminating redundant syntax, using explicit counts, and leveraging LLM context understanding, TOON achieves significant token savings while maintaining human readability.
