@@ -4,10 +4,17 @@
   "description": "Token-Oriented Object Notation - A compact format for LLM prompts with ~50% fewer tokens than JSON",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build && npm test",
     "compare": "ts-node scripts/token-comparison.ts",
     "benchmark": "ts-node scripts/benchmark.ts",
     "benchmark:all": "ts-node scripts/comprehensive-benchmark.ts"
@@ -19,10 +26,29 @@
     "token",
     "optimization",
     "compact",
-    "format"
+    "format",
+    "serialization",
+    "data-format",
+    "ai",
+    "openai",
+    "anthropic"
   ],
-  "author": "Ayushman Mishra",
+  "author": {
+    "name": "Ayushman Mishra",
+    "url": "https://github.com/ayushmanmishra"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayushmanmishra/toon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ayushmanmishra/toon/issues"
+  },
+  "homepage": "https://github.com/ayushmanmishra/toon#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
@@ -34,7 +60,8 @@
   "files": [
     "dist",
     "README.md",
-    "spec"
+    "spec",
+    "LICENSE"
   ],
   "dependencies": {
     "js-tiktoken": "^1.0.21"

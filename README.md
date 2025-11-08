@@ -135,6 +135,80 @@ const toon = encode(repo, { compactBooleans: true });
 
 ---
 
+## 🌐 Multi-Language Support
+
+TOON is a **language-agnostic format specification**. While the official implementation is in TypeScript/JavaScript, TOON can be implemented in any programming language.
+
+### Official Implementation
+
+- **JavaScript/TypeScript** (Node.js) - ✅ Available now
+  - npm: `@ayushman/toon`
+  - Works in Node.js, browsers, and TypeScript projects
+  - Supports both CommonJS and ES modules
+
+### Community Implementations
+
+We welcome implementations in other languages! The TOON format is simple to implement:
+
+- **Python** - 🚧 Coming soon (or contribute yours!)
+- **Rust** - 🚧 Coming soon (or contribute yours!)
+- **Go** - 🚧 Coming soon (or contribute yours!)
+- **Java** - 🚧 Coming soon (or contribute yours!)
+- **C# / .NET** - 🚧 Coming soon (or contribute yours!)
+- **Ruby** - 🚧 Coming soon (or contribute yours!)
+- **PHP** - 🚧 Coming soon (or contribute yours!)
+
+### Implementing TOON in Your Language
+
+TOON is straightforward to implement because it's a text-based format. The core algorithm follows a simple recursive pattern:
+
+1. **Null/Undefined** → `null` or `~`
+2. **Array** → `key[count]: value1,value2,value3`
+3. **Object** → `key1: value1,key2: value2` or `key{innerKey: value}`
+4. **Primitive** → String, number, boolean
+
+**Quick Start Guide**: See our [Implementation Guide](./docs/IMPLEMENTATION_GUIDE.md) for:
+
+- Complete algorithm explanation
+- Code examples in Python, Rust, Go, Java
+- Testing guidelines
+- Contribution instructions
+
+### Using TOON from Any Language
+
+Even without a native implementation, you can use TOON from any language:
+
+1. **Generate TOON strings** - Any language can create TOON-formatted strings
+2. **Pass to LLMs** - TOON is just text, works with any LLM API
+3. **LLMs parse TOON** - No decoder needed, LLMs understand TOON natively
+
+**Example (Python without library)**:
+
+```python
+def to_toon(data):
+    if data is None:
+        return "null"
+    if isinstance(data, list):
+        items = ",".join(to_toon(item) for item in data)
+        return f"[{len(data)}]: {items}"
+    if isinstance(data, dict):
+        pairs = ",".join(f"{k}: {to_toon(v)}" for k, v in data.items())
+        return pairs
+    return str(data)
+```
+
+### Contributing Language Implementations
+
+If you implement TOON in another language:
+
+1. Follow the [TOON specification](./spec/TOON.md)
+2. Match the JavaScript implementation's behavior
+3. Add comprehensive tests
+4. Create a README for your implementation
+5. Submit a PR or create a separate repository and link it here!
+
+---
+
 ## 📖 Documentation
 
 ### Syntax Overview
@@ -429,66 +503,10 @@ For complete format details, see the [official TOON specification](./spec/TOON.m
 - **Booleans**: `true`/`false` or `1`/`0` (compact mode)
 - **Null**: `null` or `~` (compact mode)
 
----
+### Additional Resources
 
-## 🖼️ Visual Comparison
-
-<div align="center">
-
-![TOON Format Comparison](docs/toon-comparison-diagram.png)
-
-_Token efficiency comparison across formats_
-
-</div>
-
-### Image Generation Prompt
-
-For generating the comparison diagram, use the following prompt:
-
-```
-Create a technical diagram showing token efficiency comparison for TOON format. The diagram should include:
-
-1. A bar chart or comparison visualization showing:
-   - TOON: 17,277 tokens (highlighted in green/primary color)
-   - JSON Compact: 22,125 tokens
-   - JSON: 24,891 tokens
-   - YAML: 28,234 tokens
-   - XML: 31,456 tokens
-
-2. A section showing dataset-specific wins:
-   - GitHub Repositories: TOON wins (8,555 tokens)
-   - Employee Records: TOON wins (1,207 tokens)
-   - Deeply Nested Config: TOON wins (73 tokens)
-   - E-commerce Orders: CSV wins (1,191 tokens)
-   - Event Logs: CSV wins (2,659 tokens)
-
-3. Visual examples comparing JSON vs TOON syntax side-by-side:
-   - Show a JSON example with quotes, brackets, commas
-   - Show equivalent TOON example with compact syntax
-   - Highlight token savings (e.g., "47% fewer tokens")
-
-4. Design style: Modern, clean, technical documentation style
-   - Use a professional color scheme (blues, greens for TOON)
-   - Include icons or visual elements for different data types
-   - Make it suitable for technical documentation
-   - Include labels and annotations
-
-5. Layout: Horizontal or vertical layout that fits in documentation
-   - Should be readable at ~800-1200px width
-   - Include title: "TOON Token Efficiency Comparison"
-   - Use clear typography and spacing
-```
-
-**Alternative simpler prompt**:
-
-```
-Create a clean technical diagram for TOON format documentation showing:
-- Bar chart comparing token counts: TOON (17,277, green), JSON Compact (22,125), JSON (24,891), YAML (28,234), XML (31,456)
-- Side-by-side syntax comparison: JSON example vs TOON example showing token savings
-- Dataset performance indicators
-- Modern, professional design suitable for GitHub README
-- 1200x800px, technical documentation style
-```
+- [Implementation Guide](./docs/IMPLEMENTATION_GUIDE.md) - Guide for implementing TOON in other languages
+- [TOON Specification](./spec/TOON.md) - Complete format specification
 
 ---
 
@@ -526,6 +544,10 @@ npm run benchmark:all
 ```
 
 Please see the [specification](./spec/TOON.md) for format details and design principles.
+
+### Publishing to npm
+
+For maintainers: See [Publishing Guide](./docs/PUBLISHING.md) for step-by-step instructions on publishing to npm.
 
 ---
 
