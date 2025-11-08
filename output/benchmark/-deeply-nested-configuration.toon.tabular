@@ -1,0 +1,1 @@
+app{name:MyApp,version:1.0.0,server{host:0.0.0.0,port:3000,ssl{enabled:1,cert:/path/to/cert,key:/path/to/key}},database{type:postgres,connection{host:localhost,port:5432,credentials{username:admin,password:secret}}},features{auth{enabled:1,provider:oauth,config{clientId:client123,clientSecret:secret456}},cache{enabled:1,ttl:3600,strategy:lru}}}

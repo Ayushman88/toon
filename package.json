@@ -1,0 +1,42 @@
+{
+  "name": "@ayushman/toon",
+  "version": "1.0.0",
+  "description": "Token-Oriented Object Notation - A compact format for LLM prompts with ~50% fewer tokens than JSON",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "compare": "ts-node scripts/token-comparison.ts",
+    "benchmark": "ts-node scripts/benchmark.ts",
+    "benchmark:all": "ts-node scripts/comprehensive-benchmark.ts"
+  },
+  "keywords": [
+    "toon",
+    "json",
+    "llm",
+    "token",
+    "optimization",
+    "compact",
+    "format"
+  ],
+  "author": "Ayushman Mishra",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "spec"
+  ],
+  "dependencies": {
+    "js-tiktoken": "^1.0.21"
+  }
+}
