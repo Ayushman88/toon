@@ -4,7 +4,7 @@
 
 **A compact, human-readable format designed for passing structured data to Large Language Models (LLMs)**
 
-[![npm version](https://img.shields.io/npm/v/@ayushman/toon)](https://www.npmjs.com/package/@ayushman/toon)
+[![npm version](https://img.shields.io/npm/v/@ayushmanmishra/toon)](https://www.npmjs.com/package/@ayushmanmishra/toon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **21.9% fewer tokens than JSON compact • Best-in-class performance on complex nested data**
@@ -91,13 +91,13 @@ Comprehensive testing across **5 real-world datasets** demonstrates TOON's super
 ### Installation
 
 ```bash
-npm install @ayushman/toon
+npm install @ayushmanmishra/toon
 ```
 
 ### Basic Usage
 
 ```typescript
-import { encode } from "@ayushman/toon";
+import { encode } from "@ayushmanmishra/toon";
 
 // Simple array
 const data = { tags: ["jazz", "chill", "lofi"] };
@@ -118,7 +118,7 @@ const toon = encode(nested);
 ### Real-World Example
 
 ```typescript
-import { encode } from "@ayushman/toon";
+import { encode } from "@ayushmanmishra/toon";
 
 // GitHub repository data
 const repo = {
@@ -142,7 +142,7 @@ TOON is a **language-agnostic format specification**. While the official impleme
 ### Official Implementation
 
 - **JavaScript/TypeScript** (Node.js) - ✅ Available now
-  - npm: `@ayushman/toon`
+  - npm: `@ayushmanmishra/toon`
   - Works in Node.js, browsers, and TypeScript projects
   - Supports both CommonJS and ES modules
 
@@ -227,7 +227,7 @@ TOON uses compact syntax to minimize token usage while maintaining readability:
 ### Encoding Options
 
 ```typescript
-import { encode, EncodeOptions } from "@ayushman/toon";
+import { encode, EncodeOptions } from "@ayushmanmishra/toon";
 
 const options: EncodeOptions = {
   compactBooleans: true, // Use 1/0 instead of true/false (saves ~60% tokens)
@@ -363,7 +363,7 @@ Encodes any JSON-serializable value to TOON format.
 #### Examples
 
 ```typescript
-import { encode } from "@ayushman/toon";
+import { encode } from "@ayushmanmishra/toon";
 
 // Basic encoding
 encode({ name: "John" });
@@ -567,6 +567,6 @@ TOON is designed with the goal of making LLM interactions more efficient and cos
 
 **Made with ❤️ for the LLM community**
 
-[Report Bug](https://github.com/ayushmanmishra/toon/issues) · [Request Feature](https://github.com/ayushmanmishra/toon/issues) · [Documentation](./spec/TOON.md) · [npm Package](https://www.npmjs.com/package/@ayushman/toon)
+[Report Bug](https://github.com/ayushmanmishra/toon/issues) · [Request Feature](https://github.com/ayushmanmishra/toon/issues) · [Documentation](./spec/TOON.md) · [npm Package](https://www.npmjs.com/package/@ayushmanmishra/toon)
 
 </div>
