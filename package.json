@@ -1,5 +1,5 @@
 {
-  "name": "@ayushman/toon",
+  "name": "@ayushmanmishra/toon",
   "version": "1.0.0",
   "description": "Token-Oriented Object Notation - A compact format for LLM prompts with ~50% fewer tokens than JSON",
   "main": "dist/index.js",
@@ -40,7 +40,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayushmanmishra/toon.git"
+    "url": "git+https://github.com/ayushmanmishra/toon.git"
   },
   "bugs": {
     "url": "https://github.com/ayushmanmishra/toon/issues"
