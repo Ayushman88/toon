@@ -5,7 +5,7 @@
  * 
  * @example
  * ```typescript
- * import { encode } from '@ayushman/toon';
+ * import { encode } from '@ayushmanmishra/toon';
  * 
  * const data = { tags: ['jazz', 'chill', 'lofi'] };
  * const toon = encode(data);
