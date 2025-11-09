@@ -146,6 +146,7 @@ function compareFormats(data: unknown, name: string): FormatComparison[] {
   const toon = encode(data);
   const toonCompact = encode(data, { compactBooleans: true, compactNull: true });
   const toonTabular = encode(data, { compactBooleans: true, compactNull: true, delimiter: '\t' });
+  const toonFlattened = encode(data, { compactBooleans: true, compactNull: true, delimiter: '\t', flatten: true });
   
   // Other formats
   const yaml = toYAML(data);
@@ -159,6 +160,7 @@ function compareFormats(data: unknown, name: string): FormatComparison[] {
     { format: 'TOON', tokens: countTokens(toon), size: toon.length, vsJSON: 0, vsJSONCompact: 0 },
     { format: 'TOON compact', tokens: countTokens(toonCompact), size: toonCompact.length, vsJSON: 0, vsJSONCompact: 0 },
     { format: 'TOON tabular', tokens: countTokens(toonTabular), size: toonTabular.length, vsJSON: 0, vsJSONCompact: 0 },
+    { format: 'TOON flattened', tokens: countTokens(toonFlattened), size: toonFlattened.length, vsJSON: 0, vsJSONCompact: 0 },
     { format: 'YAML', tokens: countTokens(yaml), size: yaml.length, vsJSON: 0, vsJSONCompact: 0 },
     { format: 'XML', tokens: countTokens(xml), size: xml.length, vsJSON: 0, vsJSONCompact: 0 },
   ];
