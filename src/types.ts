@@ -32,6 +32,14 @@ export interface EncodeOptions {
    * @default true
    */
   tabular?: boolean;
+
+  /**
+   * Flatten nested structures into columns (beats CSV on complex data)
+   * When enabled, nested objects become dot-notation columns (customer.name)
+   * and nested arrays become indexed columns (item0.sku, item1.sku)
+   * @default false
+   */
+  flatten?: boolean;
 }
 
 /**
