@@ -78,6 +78,103 @@ function encodePrimitive(
 }
 
 /**
+ * Flattens a nested object into flat key-value pairs with underscore notation
+ * Uses underscores instead of dots to save tokens (shorter, single token)
+ * Example: { customer: { name: "John" }, items: [{ sku: "A" }] }
+ * Returns: { "customer_name": "John", "item0_sku": "A" }
+ */
+/**
+ * Shortens common key names to save tokens
+ * Uses context-aware shortening to avoid collisions
+ */
+function shortenKey(key: string, context: string = ''): string {
+  // Context-aware shortcuts to avoid collisions
+  if (context.includes('item') || context.includes('i')) {
+    // In item context, use different shortcuts
+    const itemShortcuts: Record<string, string> = {
+      'items': 'i',
+      'item': 'i',
+      'sku': 's',
+      'quantity': 'q',
+      'price': 'p',
+    };
+    if (itemShortcuts[key]) return itemShortcuts[key];
+  }
+  
+  const shortcuts: Record<string, string> = {
+    'items': 'i',
+    'item': 'i',
+    'customer': 'c',
+    'quantity': 'q',
+    'price': 'p',
+    'orderId': 'oid',
+    'status': 'st',
+    'total': 't',
+    'name': 'n',
+    'email': 'e',
+    'sku': 'sku', // Keep full to avoid collision with status
+  };
+  return shortcuts[key] || key;
+}
+
+function flattenObject(
+  obj: Record<string, unknown>,
+  prefix: string = '',
+  maxArrayDepth: number = 10
+): Record<string, unknown> {
+  const flattened: Record<string, unknown> = {};
+  
+  for (const [key, value] of Object.entries(obj)) {
+    // Shorten key to save tokens (pass prefix as context)
+    const shortKey = shortenKey(key, prefix);
+    // Use underscore separator (saves tokens vs dot notation)
+    const newKey = prefix ? `${prefix}_${shortKey}` : shortKey;
+    
+    if (value === null || value === undefined) {
+      flattened[newKey] = value;
+    } else if (isArray(value)) {
+      // Flatten arrays by creating indexed columns (i0, i1, etc.)
+      if (value.length > 0 && maxArrayDepth > 0) {
+        value.forEach((item, index) => {
+          if (isPlainObject(item)) {
+            // Use shorter prefix: "i0" instead of "items0"
+            const arrayPrefix = prefix ? `${prefix}_${shortKey}${index}` : `${shortKey}${index}`;
+            const nested = flattenObject(item, arrayPrefix, maxArrayDepth - 1);
+            Object.assign(flattened, nested);
+          } else if (isArray(item)) {
+            // Nested arrays - flatten recursively
+            item.forEach((subItem, subIndex) => {
+              if (isPlainObject(subItem)) {
+                const nestedPrefix = prefix ? `${prefix}_${shortKey}${index}_${subIndex}` : `${shortKey}${index}_${subIndex}`;
+                const nested = flattenObject(subItem, nestedPrefix, maxArrayDepth - 1);
+                Object.assign(flattened, nested);
+              } else {
+                const flatKey = prefix ? `${prefix}_${shortKey}${index}_${subIndex}` : `${shortKey}${index}_${subIndex}`;
+                flattened[flatKey] = subItem;
+              }
+            });
+          } else {
+            // Primitive array item
+            const flatKey = prefix ? `${prefix}_${shortKey}${index}` : `${shortKey}${index}`;
+            flattened[flatKey] = item;
+          }
+        });
+      } else {
+        flattened[newKey] = value;
+      }
+    } else if (isPlainObject(value)) {
+      // Flatten nested objects recursively
+      const nested = flattenObject(value, newKey, maxArrayDepth);
+      Object.assign(flattened, nested);
+    } else {
+      flattened[newKey] = value;
+    }
+  }
+  
+  return flattened;
+}
+
+/**
  * Checks if an array contains uniform objects (same keys, all primitive values)
  * This enables tabular format encoding which is much more token-efficient
  */
@@ -190,6 +287,29 @@ function encodeArray(
   // Check if we should use tabular format
   const useTabular = options.tabular !== false; // Default to true
   if (useTabular) {
+    // If flatten mode is enabled, flatten nested structures first
+    if (options.flatten && arr.every(item => isPlainObject(item))) {
+      const flattened = arr.map(item => flattenObject(item as Record<string, unknown>));
+      
+      // Get all unique keys from all flattened objects
+      const allKeysSet = new Set<string>();
+      flattened.forEach(obj => {
+        Object.keys(obj).forEach(key => allKeysSet.add(key));
+      });
+      const allKeys = Array.from(allKeysSet);
+      
+      // Create uniform array with all keys (fill missing with null)
+      const uniform = flattened.map(obj => {
+        const result: Record<string, unknown> = {};
+        allKeys.forEach(key => {
+          result[key] = key in obj ? obj[key] : null;
+        });
+        return result;
+      });
+      
+      return encodeTabularArray(uniform, allKeys, keyName, options);
+    }
+    
     const uniformCheck = isUniformObjectArray(arr);
     if (uniformCheck.isUniform && uniformCheck.keys) {
       // Use tabular format for uniform arrays of objects
