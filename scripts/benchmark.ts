@@ -195,6 +195,7 @@ interface BenchmarkResult {
   toonTokens: number;
   toonCompactTokens: number;
   toonTabularTokens: number;
+  toonFlattenedTokens: number;
   tabularPercent: number;
 }
 
@@ -208,6 +209,8 @@ function benchmarkDataset(name: string, data: unknown, tabularPercent: number): 
   const toonCompact = encode(data, { compactBooleans: true, compactNull: true });
   // Tabular format with tabs (best tokenization for large arrays)
   const toonTabular = encode(data, { compactBooleans: true, compactNull: true, delimiter: '\t' });
+  // Flattened format (flattens nested structures to beat CSV)
+  const toonFlattened = encode(data, { compactBooleans: true, compactNull: true, delimiter: '\t', flatten: true });
   
   // Calculate token counts
   const jsonTokens = countTokens(json);
@@ -215,6 +218,7 @@ function benchmarkDataset(name: string, data: unknown, tabularPercent: number): 
   const toonTokens = countTokens(toon);
   const toonCompactTokens = countTokens(toonCompact);
   const toonTabularTokens = countTokens(toonTabular);
+  const toonFlattenedTokens = countTokens(toonFlattened);
   
   return {
     name,
@@ -223,6 +227,7 @@ function benchmarkDataset(name: string, data: unknown, tabularPercent: number): 
     toonTokens,
     toonCompactTokens,
     toonTabularTokens,
+    toonFlattenedTokens,
     tabularPercent
   };
 }
@@ -233,14 +238,22 @@ function formatBar(value: number, max: number, width: number = 20): string {
 }
 
 function formatComparison(result: BenchmarkResult) {
-  const max = Math.max(result.jsonTokens, result.toonTabularTokens);
+  const max = Math.max(result.jsonTokens, result.toonFlattenedTokens, result.toonTabularTokens);
   const toonBar = formatBar(result.toonTabularTokens, max);
+  const flattenedBar = formatBar(result.toonFlattenedTokens, max);
   
   const vsJson = ((result.jsonTokens - result.toonTabularTokens) / result.jsonTokens * 100).toFixed(1);
   const vsJsonCompact = ((result.jsonCompactTokens - result.toonTabularTokens) / result.jsonCompactTokens * 100).toFixed(1);
+  const flattenedVsJson = ((result.jsonTokens - result.toonFlattenedTokens) / result.jsonTokens * 100).toFixed(1);
+  const flattenedVsJsonCompact = ((result.jsonCompactTokens - result.toonFlattenedTokens) / result.jsonCompactTokens * 100).toFixed(1);
+  const flattenedVsTabular = ((result.toonTabularTokens - result.toonFlattenedTokens) / result.toonTabularTokens * 100).toFixed(1);
   
   console.log(`   │`);
-  console.log(`   TOON                ${toonBar}    ${result.toonTabularTokens.toLocaleString()} tokens`);
+  console.log(`   TOON tabular        ${toonBar}    ${result.toonTabularTokens.toLocaleString()} tokens`);
+  console.log(`   TOON flattened      ${flattenedBar}    ${result.toonFlattenedTokens.toLocaleString()} tokens`);
+  if (result.toonFlattenedTokens < result.toonTabularTokens) {
+    console.log(`   ├─ vs TOON tabular  (-${flattenedVsTabular}%)`);
+  }
   console.log(`   ├─ vs JSON          (${vsJson.startsWith('-') ? '' : '+'}${vsJson}%)               ${result.jsonTokens.toLocaleString()} tokens`);
   console.log(`   ├─ vs JSON compact  (${vsJsonCompact.startsWith('-') ? '' : '+'}${vsJsonCompact}%)                 ${result.jsonCompactTokens.toLocaleString()} tokens`);
 }
