@@ -235,6 +235,8 @@ const options: EncodeOptions = {
   compactBooleans: true, // Use 1/0 instead of true/false (saves ~60% tokens)
   compactNull: true, // Use ~ instead of null
   readable: false, // Add spaces for readability (default: false)
+  flatten: false, // Flatten nested structures into columns (beats CSV on complex data)
+  delimiter: '\t', // Use tabs for better tokenization (default: ',')
 };
 
 const data = { active: true, value: null };
@@ -361,6 +363,9 @@ Encodes any JSON-serializable value to TOON format.
 | `compactBooleans` | `boolean` | `false` | Use `1`/`0` instead of `true`/`false` (saves ~60% tokens) |
 | `compactNull`     | `boolean` | `false` | Use `~` instead of `null`                                 |
 | `readable`        | `boolean` | `false` | Add spaces after separators for readability               |
+| `flatten`         | `boolean` | `false` | Flatten nested structures into columns (beats CSV on complex data) |
+| `delimiter`       | `',' \| '\t' \| '|'` | `','` | Delimiter for tabular arrays (tabs tokenize better) |
+| `tabular`         | `boolean` | `true`  | Use tabular format for uniform arrays of objects         |
 
 #### Examples
 
@@ -377,6 +382,14 @@ encode(
   { compactBooleans: true, compactNull: true }
 );
 // → active: 1,value: ~
+
+// Flattened mode (beats CSV on nested data)
+encode(
+  { orders: [{ id: 1, customer: { name: "John" }, items: [{ sku: "A" }] }] },
+  { flatten: true, delimiter: '\t', compactBooleans: true }
+);
+// → oid	c_n	i0_s
+//   1	John	A
 ```
 
 ---
