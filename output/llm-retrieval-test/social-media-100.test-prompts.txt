@@ -1,0 +1,22 @@
+=== CSV Format Test ===
+Question: How many posts are in this dataset?
+Expected Answer: 100
+Tokens: 8060
+
+Data:
+# posts
+[{"id":1,"author":{"username":"user1","displayName":"User 1","verified":false,"followers":100},"content":"This is post 1 with some content","timestamp":"2024-01-02T01:00:00Z","likes":637,"shares":85,"comments":15,"hashtags":["#tag1","#tag2"],"location":null},{"id":2,"author":{"username":"user2","displayName":"User 2","verified":false,"followers":200},"content":"This is post 2 with some content","timestamp":"2024-01-03T02:00:00Z","likes":440,"shares":86,"comments":20,"hashtags":["#tag2","#tag3"],"location":null},{"id":3,"author":{"username":"user3","displayName":"User 3","verified":false,"followers":300},"content":"This is post 3 with some content","timestamp":"2024-01-04T03:00:00Z","likes":115,"shares":77,"comments":7,"hashtags":["#tag3","#tag4"],"location":{"city":"San Francisco","country":"USA"}},{"id":4,"author":{"username":"user4","displayName":"User 4","verified":false,"followers":400},"content":"This is post 4 with some content","timestamp":"2024-01-05T04:00:00Z","likes":
+... (truncated)
+
+---
+
+=== TOON Format Test ===
+Question: How many posts are in this dataset?
+Expected Answer: 100
+Tokens: 8259
+
+Data:
+posts[100]{id:1,author{username:user1,displayName:"User 1",verified:0,followers:100},content:"This is post 1 with some content",timestamp:"2024-01-02T01:00:00Z",likes:637,shares:85,comments:15,hashtags[2]#tag1,#tag2,location:~},{id:2,author{username:user2,displayName:"User 2",verified:0,followers:200},content:"This is post 2 with some content",timestamp:"2024-01-03T02:00:00Z",likes:440,shares:86,comments:20,hashtags[2]#tag2,#tag3,location:~},{id:3,author{username:user3,displayName:"User 3",verified:0,followers:300},content:"This is post 3 with some content",timestamp:"2024-01-04T03:00:00Z",likes:115,shares:77,comments:7,hashtags[2]#tag3,#tag4,location{city:"San Francisco",country:USA}},{id:4,author{username:user4,displayName:"User 4",verified:0,followers:400},content:"This is post 4 with some content",timestamp:"2024-01-05T04:00:00Z",likes:399,shares:0,comments:13,hashtags[2]#tag4,#tag5,location:~},{id:5,author{username:user5,displayName:"User 5",verified:1,followers:500},content:"This
+... (truncated)
+
+---

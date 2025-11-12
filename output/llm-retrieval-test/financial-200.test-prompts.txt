@@ -1,0 +1,22 @@
+=== CSV Format Test ===
+Question: How many transactions are in this dataset?
+Expected Answer: 200
+Tokens: 13189
+
+Data:
+# transactions
+[{"transactionId":"TXN-000001","date":"2024-01-02","account":{"accountNumber":"ACC-1","accountType":"Savings","bank":"Bank B"},"amount":"790.52","category":"Transport","merchant":"Merchant 1","description":"Transaction 1 description","status":"Completed"},{"transactionId":"TXN-000002","date":"2024-01-03","account":{"accountNumber":"ACC-2","accountType":"Credit","bank":"Bank C"},"amount":"-4843.93","category":"Shopping","merchant":"Merchant 2","description":"Transaction 2 description","status":"Failed"},{"transactionId":"TXN-000003","date":"2024-01-04","account":{"accountNumber":"ACC-3","accountType":"Checking","bank":"Bank A"},"amount":"-2814.88","category":"Bills","merchant":"Merchant 3","description":"Transaction 3 description","status":"Pending"},{"transactionId":"TXN-000004","date":"2024-01-05","account":{"accountNumber":"ACC-4","accountType":"Savings","bank":"Bank B"},"amount":"1065.19","category":"Entertainment","merchant":"Merchant 4","description":"Transaction 4 
+... (truncated)
+
+---
+
+=== TOON Format Test ===
+Question: How many transactions are in this dataset?
+Expected Answer: 200
+Tokens: 12792
+
+Data:
+transactions[200]{transactionId:TXN-000001,date:2024-01-02,account{accountNumber:ACC-1,accountType:Savings,bank:"Bank B"},amount:"790.52",category:Transport,merchant:"Merchant 1",description:"Transaction 1 description",status:Completed},{transactionId:TXN-000002,date:2024-01-03,account{accountNumber:ACC-2,accountType:Credit,bank:"Bank C"},amount:"-4843.93",category:Shopping,merchant:"Merchant 2",description:"Transaction 2 description",status:Failed},{transactionId:TXN-000003,date:2024-01-04,account{accountNumber:ACC-3,accountType:Checking,bank:"Bank A"},amount:"-2814.88",category:Bills,merchant:"Merchant 3",description:"Transaction 3 description",status:Pending},{transactionId:TXN-000004,date:2024-01-05,account{accountNumber:ACC-4,accountType:Savings,bank:"Bank B"},amount:"1065.19",category:Entertainment,merchant:"Merchant 4",description:"Transaction 4 description",status:Completed},{transactionId:TXN-000005,date:2024-01-06,account{accountNumber:ACC-5,accountType:Credit,bank:"Bank C"},
+... (truncated)
+
+---

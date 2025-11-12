@@ -1,0 +1,35 @@
+=== CSV Format Test ===
+Question: How many patients are in this dataset?
+Expected Answer: 150
+Tokens: 16955
+
+Data:
+# patients
+[{"patientId":"PAT-00001","name":"Patient 1","age":21,"gender":"F","bloodType":"A-","conditions":[{"condition":"Hypertension","diagnosed":"2020-02-01","severity":"Moderate"}],"medications":[{"name":"Medication 1","dosage":"2mg","frequency":"Daily"}],"lastVisit":"2024-01-02","insurance":{"provider":"Insurance 1","policyNumber":"POL-1","active":true}},{"patientId":"PAT-00002","name":"Patient 2","age":22,"gender":"Other","bloodType":"B+","conditions":[{"condition":"Hypertension","diagnosed":"2020-03-01","severity":"Moderate"}],"medications":[{"name":"Medication 2","dosage":"3mg","frequency":"Daily"}],"lastVisit":"2024-01-03","insurance":{"provider":"Insurance 2","policyNumber":"POL-2","active":true}},{"patientId":"PAT-00003","name":"Patient 3","age":23,"gender":"M","bloodType":"B-","conditions":[{"condition":"Hypertension","diagnosed":"2020-04-01","severity":"Moderate"},{"condition":"Diabetes","diagnosed":"2021-04-01","severity":"Mild"}],"medications":[{"name":"Medication 3","d
+... (truncated)
+
+---
+
+=== TOON Format Test ===
+Question: How many patients are in this dataset?
+Expected Answer: 150
+Tokens: 18727
+
+Data:
+[150]{patientId:PAT-00001,name:"Patient 1",age:21,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-02,insurance{provider:"Insurance 1",policyNumber:POL-1,active:1}},{patientId:PAT-00002,name:"Patient 2",age:22,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-03,insurance{provider:"Insurance 2",policyNumber:POL-2,active:1}},{patientId:PAT-00003,name:"Patient 3",age:23,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-04,ins
+... (truncated)
+
+---

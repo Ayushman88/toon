@@ -1,0 +1,22 @@
+=== CSV Format Test ===
+Question: How many products are in this dataset?
+Expected Answer: 50
+Tokens: 3128
+
+Data:
+# products
+[{"id":1,"name":"Product 1","category":"Clothing","price":"690.85","inStock":true,"rating":"1.7","tags":["tag1","tag2"],"metadata":{"brand":"Brand 1","weight":"0.5kg","dimensions":"1x2x3"}},{"id":2,"name":"Product 2","category":"Books","price":"483.64","inStock":true,"rating":"4.4","tags":["tag2","tag3","tag4"],"metadata":{"brand":"Brand 2","weight":"1kg","dimensions":"2x3x4"}},{"id":3,"name":"Product 3","category":"Home","price":"215.60","inStock":false,"rating":"0.2","tags":["tag3"],"metadata":{"brand":"Brand 3","weight":"1.5kg","dimensions":"3x4x5"}},{"id":4,"name":"Product 4","category":"Sports","price":"143.63","inStock":true,"rating":"1.3","tags":["tag4","tag5"],"metadata":{"brand":"Brand 4","weight":"2kg","dimensions":"4x5x6"}},{"id":5,"name":"Product 5","category":"Electronics","price":"266.36","inStock":true,"rating":"3.8","tags":["tag5","tag6","tag7"],"metadata":{"brand":"Brand 5","weight":"2.5kg","dimensions":"5x6x7"}},{"id":6,"name":"Product 6","category":"Clothi
+... (truncated)
+
+---
+
+=== TOON Format Test ===
+Question: How many products are in this dataset?
+Expected Answer: 50
+Tokens: 3176
+
+Data:
+products[50]{id:1,name:"Product 1",category:Clothing,price:"690.85",inStock:1,rating:"1.7",tags[2]tag1,tag2,metadata{brand:"Brand 1",weight:0.5kg,dimensions:1x2x3}},{id:2,name:"Product 2",category:Books,price:"483.64",inStock:1,rating:"4.4",tags[3]tag2,tag3,tag4,metadata{brand:"Brand 2",weight:1kg,dimensions:2x3x4}},{id:3,name:"Product 3",category:Home,price:"215.60",inStock:0,rating:"0.2",tags[1]tag3,metadata{brand:"Brand 3",weight:1.5kg,dimensions:3x4x5}},{id:4,name:"Product 4",category:Sports,price:"143.63",inStock:1,rating:"1.3",tags[2]tag4,tag5,metadata{brand:"Brand 4",weight:2kg,dimensions:4x5x6}},{id:5,name:"Product 5",category:Electronics,price:"266.36",inStock:1,rating:"3.8",tags[3]tag5,tag6,tag7,metadata{brand:"Brand 5",weight:2.5kg,dimensions:5x6x7}},{id:6,name:"Product 6",category:Clothing,price:"94.48",inStock:0,rating:"4.0",tags[1]tag6,metadata{brand:"Brand 6",weight:3kg,dimensions:6x7x8}},{id:7,name:"Product 7",category:Books,price:"612.97",inStock:1,rating:"2.4",tags[2]
+... (truncated)
+
+---

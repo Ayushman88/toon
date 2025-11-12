@@ -1,0 +1,22 @@
+=== CSV Format Test ===
+Question: How many logs are in this dataset?
+Expected Answer: 500
+Tokens: 51995
+
+Data:
+# logs
+[{"logId":"LOG-1","timestamp":"2024-01-02T01:01:00Z","level":"WARN","service":"service-1","message":"Log message 1 with details","userId":"user-1","sessionId":"session-1","ipAddress":"192.168.1.1","userAgent":"Browser-1","responseTime":48,"statusCode":201,"metadata":{"requestId":"req-1","endpoint":"/api/v1/endpoint1","method":"POST"}},{"logId":"LOG-2","timestamp":"2024-01-03T02:02:00Z","level":"ERROR","service":"service-2","message":"Log message 2 with details","userId":"user-2","sessionId":"session-2","ipAddress":"192.168.1.2","userAgent":"Browser-2","responseTime":971,"statusCode":400,"metadata":{"requestId":"req-2","endpoint":"/api/v1/endpoint2","method":"PUT"}},{"logId":"LOG-3","timestamp":"2024-01-04T03:03:00Z","level":"DEBUG","service":"service-3","message":"Log message 3 with details","userId":"user-3","sessionId":"session-3","ipAddress":"192.168.1.3","userAgent":"Browser-3","responseTime":731,"statusCode":404,"metadata":{"requestId":"req-3","endpoint":"/api/v1/endpoint3"
+... (truncated)
+
+---
+
+=== TOON Format Test ===
+Question: How many logs are in this dataset?
+Expected Answer: 500
+Tokens: 49493
+
+Data:
+logs[500]{logId:LOG-1,timestamp:"2024-01-02T01:01:00Z",level:WARN,service:service-1,message:"Log message 1 with details",userId:user-1,sessionId:session-1,ipAddress:192.168.1.1,userAgent:Browser-1,responseTime:48,statusCode:201,metadata{requestId:req-1,endpoint:/api/v1/endpoint1,method:POST}},{logId:LOG-2,timestamp:"2024-01-03T02:02:00Z",level:ERROR,service:service-2,message:"Log message 2 with details",userId:user-2,sessionId:session-2,ipAddress:192.168.1.2,userAgent:Browser-2,responseTime:971,statusCode:400,metadata{requestId:req-2,endpoint:/api/v1/endpoint2,method:PUT}},{logId:LOG-3,timestamp:"2024-01-04T03:03:00Z",level:DEBUG,service:service-3,message:"Log message 3 with details",userId:user-3,sessionId:session-3,ipAddress:192.168.1.3,userAgent:Browser-3,responseTime:731,statusCode:404,metadata{requestId:req-3,endpoint:/api/v1/endpoint3,method:DELETE}},{logId:LOG-4,timestamp:"2024-01-05T04:04:00Z",level:INFO,service:service-4,message:"Log message 4 with details",userId:user-4,sessi
+... (truncated)
+
+---

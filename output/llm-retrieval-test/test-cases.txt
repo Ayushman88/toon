@@ -1,0 +1,309 @@
+=== Test 1: Count items ===
+Question: How many users are in this dataset?
+Expected Answer: 3
+
+CSV Format:
+id,name,role
+1,Alice,admin
+2,Bob,user
+3,Charlie,user
+
+TOON Format:
+users[3]{id,name,role}:
+id,name,role
+1,Alice,admin
+2,Bob,user
+3,Charlie,user
+
+---
+
+
+=== Test 2: Find specific value ===
+Question: What is the name of the user with id 2?
+Expected Answer: Bob
+
+CSV Format:
+id,name,role
+1,Alice,admin
+2,Bob,user
+3,Charlie,user
+
+TOON Format:
+users[3]{id,name,role}:
+id,name,role
+1,Alice,admin
+2,Bob,user
+3,Charlie,user
+
+---
+
+
+=== Test 3: Filter by condition ===
+Question: How many users have the role "admin"?
+Expected Answer: 1
+
+CSV Format:
+id,name,role
+1,Alice,admin
+2,Bob,user
+3,Charlie,user
+
+TOON Format:
+users[3]{id,name,role}:
+id,name,role
+1,Alice,admin
+2,Bob,user
+3,Charlie,user
+
+---
+
+
+=== Test 4: Nested data - find customer ===
+Question: What is the email of the customer for order ORD-1?
+Expected Answer: alice@example.com
+
+CSV Format:
+orderId,customer.name,customer.email,items.0.sku,items.0.quantity,items.0.price,total,status
+ORD-1,Alice,alice@example.com,SKU-1,2,10.99,21.98,pending
+ORD-2,Bob,bob@example.com,SKU-2,1,5.99,5.99,shipped
+
+TOON Format:
+[2]{orderId:ORD-1,customer{name:Alice,email:alice@example.com},items[1]{sku,quantity,price}:
+sku,quantity,price
+SKU-1,2,10.99,total:21.98,status:pending},{orderId:ORD-2,customer{name:Bob,email:bob@example.com},items[1]{sku,quantity,price}:
+sku,quantity,price
+SKU-2,1,5.99,total:5.99,status:shipped}
+
+---
+
+
+=== Test 5: Nested data - flattened format ===
+Question: What is the email of the customer for order ORD-1?
+Expected Answer: alice@example.com
+
+CSV Format:
+orderId,customer.name,customer.email,items.0.sku,items.0.quantity,items.0.price,total,status
+ORD-1,Alice,alice@example.com,SKU-1,2,10.99,21.98,pending
+ORD-2,Bob,bob@example.com,SKU-2,1,5.99,5.99,shipped
+
+TOON Format:
+orders[2]{oid,c_n,c_e,i0_s,i0_q,i0_p,t,st}:
+oid	c_n	c_e	i0_s	i0_q	i0_p	t	st
+ORD-1	Alice	alice@example.com	SKU-1	2	10.99	21.98	pending
+ORD-2	Bob	bob@example.com	SKU-2	1	5.99	5.99	shipped
+
+---
+
+
+=== Test 6: Large dataset - find by ID ===
+Question: What is the email of the user with id 50?
+Expected Answer: user50@example.com
+
+CSV Format:
+id,name,email,role,active,score
+1,User 1,user1@example.com,admin,false,525
+2,User 2,user2@example.com,user,true,480
+3,User 3,user3@example.com,moderator,true,139
+4,User 4,user4@example.com,admin,true,2
+5,User 5,user5@example.com,user,true,7
+6,User 6,user6@example.com,moderator,true,764
+7,User 7,user7@example.com,admin,true,630
+8,User 8,user8@example.com,user,true,6
+9,User 9,user9@example.com,moderator,true,6
+10,User 10,user10@example.com,admin,true,309
+11,User 11,user11@example.com,user,false,563
+12,User 12,user12@example.com,moderator,true,748
+13,User 13,user13@example.com,admin,true,315
+14,User 14,user14@example.com,user,true,580
+15,User 15,user15@example.com,moderator,true,56
+16,User 16,user16@example.com,admin,true,606
+17,User 17,user17@example.com,user,true,958
+18,User 18,user18@example.com,moderator,true,34
+19,User 19,user19@example.com,admin,true,787
+20,User 20,user20@example.com,user,true,78
+21,User 21,user21@example.com,moderator,false,755
+22,User 22,user22@example.com,admin,true,478
+23,User 23,user23@example.com,user,true,704
+24,User 24,user24@example.com,moderator,true,857
+25,User 25,user25@example.com,admin,true,797
+26,User 26,user26@example.com,user,true,804
+27,User 27,user27@example.com,moderator,true,296
+28,User 28,user28@example.com,admin,true,37
+29,User 29,user29@example.com,user,true,441
+30,User 30,user30@example.com,moderator,true,973
+31,User 31,user31@example.com,admin,false,955
+32,User 32,user32@example.com,user,true,96
+33,User 33,user33@example.com,moderator,true,438
+34,User 34,user34@example.com,admin,true,313
+35,User 35,user35@example.com,user,true,718
+36,User 36,user36@example.com,moderator,true,537
+37,User 37,user37@example.com,admin,true,428
+38,User 38,user38@example.com,user,true,385
+39,User 39,user39@example.com,moderator,true,997
+40,User 40,user40@example.com,admin,true,425
+41,User 41,user41@example.com,user,false,874
+42,User 42,user42@example.com,moderator,true,263
+43,User 43,user43@example.com,admin,true,631
+44,User 44,user44@example.com,user,true,474
+45,User 45,user45@example.com,moderator,true,321
+46,User 46,user46@example.com,admin,true,549
+47,User 47,user47@example.com,user,true,220
+48,User 48,user48@example.com,moderator,true,164
+49,User 49,user49@example.com,admin,true,785
+50,User 50,user50@example.com,user,true,73
+51,User 51,user51@example.com,moderator,false,260
+52,User 52,user52@example.com,admin,true,594
+53,User 53,user53@example.com,user,true,210
+54,User 54,user54@example.com,moderator,true,259
+55,User 55,user55@example.com,admin,true,532
+56,User 56,user56@example.com,user,true,684
+57,User 57,user57@example.com,moderator,true,766
+58,User 58,user58@example.com,admin,true,51
+59,User 59,user59@example.com,user,true,816
+60,User 60,user60@example.com,moderator,true,966
+61,User 61,user61@example.com,admin,false,505
+62,User 62,user62@example.com,user,true,282
+63,User 63,user63@example.com,moderator,true,647
+64,User 64,user64@example.com,admin,true,938
+65,User 65,user65@example.com,user,true,286
+66,User 66,user66@example.com,moderator,true,318
+67,User 67,user67@example.com,admin,true,26
+68,User 68,user68@example.com,user,true,95
+69,User 69,user69@example.com,moderator,true,31
+70,User 70,user70@example.com,admin,true,287
+71,User 71,user71@example.com,user,false,844
+72,User 72,user72@example.com,moderator,true,757
+73,User 73,user73@example.com,admin,true,223
+74,User 74,user74@example.com,user,true,415
+75,User 75,user75@example.com,moderator,true,123
+76,User 76,user76@example.com,admin,true,12
+77,User 77,user77@example.com,user,true,712
+78,User 78,user78@example.com,moderator,true,266
+79,User 79,user79@example.com,admin,true,619
+80,User 80,user80@example.com,user,true,803
+81,User 81,user81@example.com,moderator,false,8
+82,User 82,user82@example.com,admin,true,690
+83,User 83,user83@example.com,user,true,710
+84,User 84,user84@example.com,moderator,true,931
+85,User 85,user85@example.com,admin,true,647
+86,User 86,user86@example.com,user,true,754
+87,User 87,user87@example.com,moderator,true,201
+88,User 88,user88@example.com,admin,true,985
+89,User 89,user89@example.com,user,true,26
+90,User 90,user90@example.com,moderator,true,483
+91,User 91,user91@example.com,admin,false,384
+92,User 92,user92@example.com,user,true,366
+93,User 93,user93@example.com,moderator,true,255
+94,User 94,user94@example.com,admin,true,956
+95,User 95,user95@example.com,user,true,773
+96,User 96,user96@example.com,moderator,true,308
+97,User 97,user97@example.com,admin,true,276
+98,User 98,user98@example.com,user,true,806
+99,User 99,user99@example.com,moderator,true,159
+100,User 100,user100@example.com,admin,true,666
+
+TOON Format:
+users[100]{id,name,email,role,active,score}:
+id,name,email,role,active,score
+1,User 1,user1@example.com,admin,0,525
+2,User 2,user2@example.com,user,1,480
+3,User 3,user3@example.com,moderator,1,139
+4,User 4,user4@example.com,admin,1,2
+5,User 5,user5@example.com,user,1,7
+6,User 6,user6@example.com,moderator,1,764
+7,User 7,user7@example.com,admin,1,630
+8,User 8,user8@example.com,user,1,6
+9,User 9,user9@example.com,moderator,1,6
+10,User 10,user10@example.com,admin,1,309
+11,User 11,user11@example.com,user,0,563
+12,User 12,user12@example.com,moderator,1,748
+13,User 13,user13@example.com,admin,1,315
+14,User 14,user14@example.com,user,1,580
+15,User 15,user15@example.com,moderator,1,56
+16,User 16,user16@example.com,admin,1,606
+17,User 17,user17@example.com,user,1,958
+18,User 18,user18@example.com,moderator,1,34
+19,User 19,user19@example.com,admin,1,787
+20,User 20,user20@example.com,user,1,78
+21,User 21,user21@example.com,moderator,0,755
+22,User 22,user22@example.com,admin,1,478
+23,User 23,user23@example.com,user,1,704
+24,User 24,user24@example.com,moderator,1,857
+25,User 25,user25@example.com,admin,1,797
+26,User 26,user26@example.com,user,1,804
+27,User 27,user27@example.com,moderator,1,296
+28,User 28,user28@example.com,admin,1,37
+29,User 29,user29@example.com,user,1,441
+30,User 30,user30@example.com,moderator,1,973
+31,User 31,user31@example.com,admin,0,955
+32,User 32,user32@example.com,user,1,96
+33,User 33,user33@example.com,moderator,1,438
+34,User 34,user34@example.com,admin,1,313
+35,User 35,user35@example.com,user,1,718
+36,User 36,user36@example.com,moderator,1,537
+37,User 37,user37@example.com,admin,1,428
+38,User 38,user38@example.com,user,1,385
+39,User 39,user39@example.com,moderator,1,997
+40,User 40,user40@example.com,admin,1,425
+41,User 41,user41@example.com,user,0,874
+42,User 42,user42@example.com,moderator,1,263
+43,User 43,user43@example.com,admin,1,631
+44,User 44,user44@example.com,user,1,474
+45,User 45,user45@example.com,moderator,1,321
+46,User 46,user46@example.com,admin,1,549
+47,User 47,user47@example.com,user,1,220
+48,User 48,user48@example.com,moderator,1,164
+49,User 49,user49@example.com,admin,1,785
+50,User 50,user50@example.com,user,1,73
+51,User 51,user51@example.com,moderator,0,260
+52,User 52,user52@example.com,admin,1,594
+53,User 53,user53@example.com,user,1,210
+54,User 54,user54@example.com,moderator,1,259
+55,User 55,user55@example.com,admin,1,532
+56,User 56,user56@example.com,user,1,684
+57,User 57,user57@example.com,moderator,1,766
+58,User 58,user58@example.com,admin,1,51
+59,User 59,user59@example.com,user,1,816
+60,User 60,user60@example.com,moderator,1,966
+61,User 61,user61@example.com,admin,0,505
+62,User 62,user62@example.com,user,1,282
+63,User 63,user63@example.com,moderator,1,647
+64,User 64,user64@example.com,admin,1,938
+65,User 65,user65@example.com,user,1,286
+66,User 66,user66@example.com,moderator,1,318
+67,User 67,user67@example.com,admin,1,26
+68,User 68,user68@example.com,user,1,95
+69,User 69,user69@example.com,moderator,1,31
+70,User 70,user70@example.com,admin,1,287
+71,User 71,user71@example.com,user,0,844
+72,User 72,user72@example.com,moderator,1,757
+73,User 73,user73@example.com,admin,1,223
+74,User 74,user74@example.com,user,1,415
+75,User 75,user75@example.com,moderator,1,123
+76,User 76,user76@example.com,admin,1,12
+77,User 77,user77@example.com,user,1,712
+78,User 78,user78@example.com,moderator,1,266
+79,User 79,user79@example.com,admin,1,619
+80,User 80,user80@example.com,user,1,803
+81,User 81,user81@example.com,moderator,0,8
+82,User 82,user82@example.com,admin,1,690
+83,User 83,user83@example.com,user,1,710
+84,User 84,user84@example.com,moderator,1,931
+85,User 85,user85@example.com,admin,1,647
+86,User 86,user86@example.com,user,1,754
+87,User 87,user87@example.com,moderator,1,201
+88,User 88,user88@example.com,admin,1,985
+89,User 89,user89@example.com,user,1,26
+90,User 90,user90@example.com,moderator,1,483
+91,User 91,user91@example.com,admin,0,384
+92,User 92,user92@example.com,user,1,366
+93,User 93,user93@example.com,moderator,1,255
+94,User 94,user94@example.com,admin,1,956
+95,User 95,user95@example.com,user,1,773
+96,User 96,user96@example.com,moderator,1,308
+97,User 97,user97@example.com,admin,1,276
+98,User 98,user98@example.com,user,1,806
+99,User 99,user99@example.com,moderator,1,159
+100,User 100,user100@example.com,admin,1,666
+
+---

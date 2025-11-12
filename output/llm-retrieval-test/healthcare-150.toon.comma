@@ -1,0 +1,651 @@
+[150]{patientId:PAT-00001,name:"Patient 1",age:21,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-02,insurance{provider:"Insurance 1",policyNumber:POL-1,active:1}},{patientId:PAT-00002,name:"Patient 2",age:22,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-03,insurance{provider:"Insurance 2",policyNumber:POL-2,active:1}},{patientId:PAT-00003,name:"Patient 3",age:23,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-04,insurance{provider:"Insurance 3",policyNumber:POL-3,active:1}},{patientId:PAT-00004,name:"Patient 4",age:24,gender:F,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-05,insurance{provider:"Insurance 4",policyNumber:POL-4,active:1}},{patientId:PAT-00005,name:"Patient 5",age:25,gender:Other,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-06,insurance{provider:"Insurance 0",policyNumber:POL-5,active:1}},{patientId:PAT-00006,name:"Patient 6",age:26,gender:M,bloodType:AB+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-07,insurance{provider:"Insurance 1",policyNumber:POL-6,active:1}},{patientId:PAT-00007,name:"Patient 7",age:27,gender:F,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-08,insurance{provider:"Insurance 2",policyNumber:POL-7,active:1}},{patientId:PAT-00008,name:"Patient 8",age:28,gender:Other,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-09,insurance{provider:"Insurance 3",policyNumber:POL-8,active:1}},{patientId:PAT-00009,name:"Patient 9",age:29,gender:M,bloodType:A-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-10,insurance{provider:"Insurance 4",policyNumber:POL-9,active:1}},{patientId:PAT-00010,name:"Patient 10",age:30,gender:F,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-11,insurance{provider:"Insurance 0",policyNumber:POL-10,active:0}},{patientId:PAT-00011,name:"Patient 11",age:31,gender:Other,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-12,insurance{provider:"Insurance 1",policyNumber:POL-11,active:1}},{patientId:PAT-00012,name:"Patient 12",age:32,gender:M,bloodType:O+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-13,insurance{provider:"Insurance 2",policyNumber:POL-12,active:1}},{patientId:PAT-00013,name:"Patient 13",age:33,gender:F,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-14,insurance{provider:"Insurance 3",policyNumber:POL-13,active:1}},{patientId:PAT-00014,name:"Patient 14",age:34,gender:Other,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-15,insurance{provider:"Insurance 4",policyNumber:POL-14,active:1}},{patientId:PAT-00015,name:"Patient 15",age:35,gender:M,bloodType:AB-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-16,insurance{provider:"Insurance 0",policyNumber:POL-15,active:1}},{patientId:PAT-00016,name:"Patient 16",age:36,gender:F,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-17,insurance{provider:"Insurance 1",policyNumber:POL-16,active:1}},{patientId:PAT-00017,name:"Patient 17",age:37,gender:Other,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-18,insurance{provider:"Insurance 2",policyNumber:POL-17,active:1}},{patientId:PAT-00018,name:"Patient 18",age:38,gender:M,bloodType:B+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-19,insurance{provider:"Insurance 3",policyNumber:POL-18,active:1}},{patientId:PAT-00019,name:"Patient 19",age:39,gender:F,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-20,insurance{provider:"Insurance 4",policyNumber:POL-19,active:1}},{patientId:PAT-00020,name:"Patient 20",age:40,gender:Other,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-21,insurance{provider:"Insurance 0",policyNumber:POL-20,active:0}},{patientId:PAT-00021,name:"Patient 21",age:41,gender:M,bloodType:O-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-22,insurance{provider:"Insurance 1",policyNumber:POL-21,active:1}},{patientId:PAT-00022,name:"Patient 22",age:42,gender:F,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-23,insurance{provider:"Insurance 2",policyNumber:POL-22,active:1}},{patientId:PAT-00023,name:"Patient 23",age:43,gender:Other,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-24,insurance{provider:"Insurance 3",policyNumber:POL-23,active:1}},{patientId:PAT-00024,name:"Patient 24",age:44,gender:M,bloodType:A+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-25,insurance{provider:"Insurance 4",policyNumber:POL-24,active:1}},{patientId:PAT-00025,name:"Patient 25",age:45,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-26,insurance{provider:"Insurance 0",policyNumber:POL-25,active:1}},{patientId:PAT-00026,name:"Patient 26",age:46,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-27,insurance{provider:"Insurance 1",policyNumber:POL-26,active:1}},{patientId:PAT-00027,name:"Patient 27",age:47,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-28,insurance{provider:"Insurance 2",policyNumber:POL-27,active:1}},{patientId:PAT-00028,name:"Patient 28",age:48,gender:F,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-01,insurance{provider:"Insurance 3",policyNumber:POL-28,active:1}},{patientId:PAT-00029,name:"Patient 29",age:49,gender:Other,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-02,insurance{provider:"Insurance 4",policyNumber:POL-29,active:1}},{patientId:PAT-00030,name:"Patient 30",age:50,gender:M,bloodType:AB+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-03,insurance{provider:"Insurance 0",policyNumber:POL-30,active:0}},{patientId:PAT-00031,name:"Patient 31",age:51,gender:F,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-04,insurance{provider:"Insurance 1",policyNumber:POL-31,active:1}},{patientId:PAT-00032,name:"Patient 32",age:52,gender:Other,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-05,insurance{provider:"Insurance 2",policyNumber:POL-32,active:1}},{patientId:PAT-00033,name:"Patient 33",age:53,gender:M,bloodType:A-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-06,insurance{provider:"Insurance 3",policyNumber:POL-33,active:1}},{patientId:PAT-00034,name:"Patient 34",age:54,gender:F,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-07,insurance{provider:"Insurance 4",policyNumber:POL-34,active:1}},{patientId:PAT-00035,name:"Patient 35",age:55,gender:Other,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-08,insurance{provider:"Insurance 0",policyNumber:POL-35,active:1}},{patientId:PAT-00036,name:"Patient 36",age:56,gender:M,bloodType:O+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-09,insurance{provider:"Insurance 1",policyNumber:POL-36,active:1}},{patientId:PAT-00037,name:"Patient 37",age:57,gender:F,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-10,insurance{provider:"Insurance 2",policyNumber:POL-37,active:1}},{patientId:PAT-00038,name:"Patient 38",age:58,gender:Other,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-11,insurance{provider:"Insurance 3",policyNumber:POL-38,active:1}},{patientId:PAT-00039,name:"Patient 39",age:59,gender:M,bloodType:AB-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-12,insurance{provider:"Insurance 4",policyNumber:POL-39,active:1}},{patientId:PAT-00040,name:"Patient 40",age:60,gender:F,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-13,insurance{provider:"Insurance 0",policyNumber:POL-40,active:0}},{patientId:PAT-00041,name:"Patient 41",age:61,gender:Other,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-14,insurance{provider:"Insurance 1",policyNumber:POL-41,active:1}},{patientId:PAT-00042,name:"Patient 42",age:62,gender:M,bloodType:B+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-15,insurance{provider:"Insurance 2",policyNumber:POL-42,active:1}},{patientId:PAT-00043,name:"Patient 43",age:63,gender:F,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-16,insurance{provider:"Insurance 3",policyNumber:POL-43,active:1}},{patientId:PAT-00044,name:"Patient 44",age:64,gender:Other,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-17,insurance{provider:"Insurance 4",policyNumber:POL-44,active:1}},{patientId:PAT-00045,name:"Patient 45",age:65,gender:M,bloodType:O-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-18,insurance{provider:"Insurance 0",policyNumber:POL-45,active:1}},{patientId:PAT-00046,name:"Patient 46",age:66,gender:F,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-19,insurance{provider:"Insurance 1",policyNumber:POL-46,active:1}},{patientId:PAT-00047,name:"Patient 47",age:67,gender:Other,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-20,insurance{provider:"Insurance 2",policyNumber:POL-47,active:1}},{patientId:PAT-00048,name:"Patient 48",age:68,gender:M,bloodType:A+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-21,insurance{provider:"Insurance 3",policyNumber:POL-48,active:1}},{patientId:PAT-00049,name:"Patient 49",age:69,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-22,insurance{provider:"Insurance 4",policyNumber:POL-49,active:1}},{patientId:PAT-00050,name:"Patient 50",age:70,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-23,insurance{provider:"Insurance 0",policyNumber:POL-50,active:0}},{patientId:PAT-00051,name:"Patient 51",age:71,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-24,insurance{provider:"Insurance 1",policyNumber:POL-51,active:1}},{patientId:PAT-00052,name:"Patient 52",age:72,gender:F,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-25,insurance{provider:"Insurance 2",policyNumber:POL-52,active:1}},{patientId:PAT-00053,name:"Patient 53",age:73,gender:Other,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-26,insurance{provider:"Insurance 3",policyNumber:POL-53,active:1}},{patientId:PAT-00054,name:"Patient 54",age:74,gender:M,bloodType:AB+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-27,insurance{provider:"Insurance 4",policyNumber:POL-54,active:1}},{patientId:PAT-00055,name:"Patient 55",age:75,gender:F,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-28,insurance{provider:"Insurance 0",policyNumber:POL-55,active:1}},{patientId:PAT-00056,name:"Patient 56",age:76,gender:Other,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-01,insurance{provider:"Insurance 1",policyNumber:POL-56,active:1}},{patientId:PAT-00057,name:"Patient 57",age:77,gender:M,bloodType:A-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-02,insurance{provider:"Insurance 2",policyNumber:POL-57,active:1}},{patientId:PAT-00058,name:"Patient 58",age:78,gender:F,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-03,insurance{provider:"Insurance 3",policyNumber:POL-58,active:1}},{patientId:PAT-00059,name:"Patient 59",age:79,gender:Other,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-04,insurance{provider:"Insurance 4",policyNumber:POL-59,active:1}},{patientId:PAT-00060,name:"Patient 60",age:20,gender:M,bloodType:O+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-05,insurance{provider:"Insurance 0",policyNumber:POL-60,active:0}},{patientId:PAT-00061,name:"Patient 61",age:21,gender:F,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-06,insurance{provider:"Insurance 1",policyNumber:POL-61,active:1}},{patientId:PAT-00062,name:"Patient 62",age:22,gender:Other,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-07,insurance{provider:"Insurance 2",policyNumber:POL-62,active:1}},{patientId:PAT-00063,name:"Patient 63",age:23,gender:M,bloodType:AB-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-08,insurance{provider:"Insurance 3",policyNumber:POL-63,active:1}},{patientId:PAT-00064,name:"Patient 64",age:24,gender:F,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-09,insurance{provider:"Insurance 4",policyNumber:POL-64,active:1}},{patientId:PAT-00065,name:"Patient 65",age:25,gender:Other,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-10,insurance{provider:"Insurance 0",policyNumber:POL-65,active:1}},{patientId:PAT-00066,name:"Patient 66",age:26,gender:M,bloodType:B+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-11,insurance{provider:"Insurance 1",policyNumber:POL-66,active:1}},{patientId:PAT-00067,name:"Patient 67",age:27,gender:F,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-12,insurance{provider:"Insurance 2",policyNumber:POL-67,active:1}},{patientId:PAT-00068,name:"Patient 68",age:28,gender:Other,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-13,insurance{provider:"Insurance 3",policyNumber:POL-68,active:1}},{patientId:PAT-00069,name:"Patient 69",age:29,gender:M,bloodType:O-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-14,insurance{provider:"Insurance 4",policyNumber:POL-69,active:1}},{patientId:PAT-00070,name:"Patient 70",age:30,gender:F,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-15,insurance{provider:"Insurance 0",policyNumber:POL-70,active:0}},{patientId:PAT-00071,name:"Patient 71",age:31,gender:Other,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-16,insurance{provider:"Insurance 1",policyNumber:POL-71,active:1}},{patientId:PAT-00072,name:"Patient 72",age:32,gender:M,bloodType:A+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-17,insurance{provider:"Insurance 2",policyNumber:POL-72,active:1}},{patientId:PAT-00073,name:"Patient 73",age:33,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-18,insurance{provider:"Insurance 3",policyNumber:POL-73,active:1}},{patientId:PAT-00074,name:"Patient 74",age:34,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-19,insurance{provider:"Insurance 4",policyNumber:POL-74,active:1}},{patientId:PAT-00075,name:"Patient 75",age:35,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-20,insurance{provider:"Insurance 0",policyNumber:POL-75,active:1}},{patientId:PAT-00076,name:"Patient 76",age:36,gender:F,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-21,insurance{provider:"Insurance 1",policyNumber:POL-76,active:1}},{patientId:PAT-00077,name:"Patient 77",age:37,gender:Other,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-22,insurance{provider:"Insurance 2",policyNumber:POL-77,active:1}},{patientId:PAT-00078,name:"Patient 78",age:38,gender:M,bloodType:AB+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-23,insurance{provider:"Insurance 3",policyNumber:POL-78,active:1}},{patientId:PAT-00079,name:"Patient 79",age:39,gender:F,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-24,insurance{provider:"Insurance 4",policyNumber:POL-79,active:1}},{patientId:PAT-00080,name:"Patient 80",age:40,gender:Other,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-25,insurance{provider:"Insurance 0",policyNumber:POL-80,active:0}},{patientId:PAT-00081,name:"Patient 81",age:41,gender:M,bloodType:A-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-26,insurance{provider:"Insurance 1",policyNumber:POL-81,active:1}},{patientId:PAT-00082,name:"Patient 82",age:42,gender:F,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-27,insurance{provider:"Insurance 2",policyNumber:POL-82,active:1}},{patientId:PAT-00083,name:"Patient 83",age:43,gender:Other,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-28,insurance{provider:"Insurance 3",policyNumber:POL-83,active:1}},{patientId:PAT-00084,name:"Patient 84",age:44,gender:M,bloodType:O+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-01,insurance{provider:"Insurance 4",policyNumber:POL-84,active:1}},{patientId:PAT-00085,name:"Patient 85",age:45,gender:F,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-02,insurance{provider:"Insurance 0",policyNumber:POL-85,active:1}},{patientId:PAT-00086,name:"Patient 86",age:46,gender:Other,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-03,insurance{provider:"Insurance 1",policyNumber:POL-86,active:1}},{patientId:PAT-00087,name:"Patient 87",age:47,gender:M,bloodType:AB-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-04,insurance{provider:"Insurance 2",policyNumber:POL-87,active:1}},{patientId:PAT-00088,name:"Patient 88",age:48,gender:F,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-05,insurance{provider:"Insurance 3",policyNumber:POL-88,active:1}},{patientId:PAT-00089,name:"Patient 89",age:49,gender:Other,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-06,insurance{provider:"Insurance 4",policyNumber:POL-89,active:1}},{patientId:PAT-00090,name:"Patient 90",age:50,gender:M,bloodType:B+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-07,insurance{provider:"Insurance 0",policyNumber:POL-90,active:0}},{patientId:PAT-00091,name:"Patient 91",age:51,gender:F,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-08,insurance{provider:"Insurance 1",policyNumber:POL-91,active:1}},{patientId:PAT-00092,name:"Patient 92",age:52,gender:Other,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-09,insurance{provider:"Insurance 2",policyNumber:POL-92,active:1}},{patientId:PAT-00093,name:"Patient 93",age:53,gender:M,bloodType:O-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-10,insurance{provider:"Insurance 3",policyNumber:POL-93,active:1}},{patientId:PAT-00094,name:"Patient 94",age:54,gender:F,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-11,insurance{provider:"Insurance 4",policyNumber:POL-94,active:1}},{patientId:PAT-00095,name:"Patient 95",age:55,gender:Other,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-12,insurance{provider:"Insurance 0",policyNumber:POL-95,active:1}},{patientId:PAT-00096,name:"Patient 96",age:56,gender:M,bloodType:A+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-13,insurance{provider:"Insurance 1",policyNumber:POL-96,active:1}},{patientId:PAT-00097,name:"Patient 97",age:57,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-14,insurance{provider:"Insurance 2",policyNumber:POL-97,active:1}},{patientId:PAT-00098,name:"Patient 98",age:58,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-15,insurance{provider:"Insurance 3",policyNumber:POL-98,active:1}},{patientId:PAT-00099,name:"Patient 99",age:59,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-16,insurance{provider:"Insurance 4",policyNumber:POL-99,active:1}},{patientId:PAT-00100,name:"Patient 100",age:60,gender:F,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-17,insurance{provider:"Insurance 0",policyNumber:POL-100,active:0}},{patientId:PAT-00101,name:"Patient 101",age:61,gender:Other,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-18,insurance{provider:"Insurance 1",policyNumber:POL-101,active:1}},{patientId:PAT-00102,name:"Patient 102",age:62,gender:M,bloodType:AB+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-19,insurance{provider:"Insurance 2",policyNumber:POL-102,active:1}},{patientId:PAT-00103,name:"Patient 103",age:63,gender:F,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-20,insurance{provider:"Insurance 3",policyNumber:POL-103,active:1}},{patientId:PAT-00104,name:"Patient 104",age:64,gender:Other,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-21,insurance{provider:"Insurance 4",policyNumber:POL-104,active:1}},{patientId:PAT-00105,name:"Patient 105",age:65,gender:M,bloodType:A-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-22,insurance{provider:"Insurance 0",policyNumber:POL-105,active:1}},{patientId:PAT-00106,name:"Patient 106",age:66,gender:F,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-23,insurance{provider:"Insurance 1",policyNumber:POL-106,active:1}},{patientId:PAT-00107,name:"Patient 107",age:67,gender:Other,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-24,insurance{provider:"Insurance 2",policyNumber:POL-107,active:1}},{patientId:PAT-00108,name:"Patient 108",age:68,gender:M,bloodType:O+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-25,insurance{provider:"Insurance 3",policyNumber:POL-108,active:1}},{patientId:PAT-00109,name:"Patient 109",age:69,gender:F,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-26,insurance{provider:"Insurance 4",policyNumber:POL-109,active:1}},{patientId:PAT-00110,name:"Patient 110",age:70,gender:Other,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-27,insurance{provider:"Insurance 0",policyNumber:POL-110,active:0}},{patientId:PAT-00111,name:"Patient 111",age:71,gender:M,bloodType:AB-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-28,insurance{provider:"Insurance 1",policyNumber:POL-111,active:1}},{patientId:PAT-00112,name:"Patient 112",age:72,gender:F,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-01,insurance{provider:"Insurance 2",policyNumber:POL-112,active:1}},{patientId:PAT-00113,name:"Patient 113",age:73,gender:Other,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-02,insurance{provider:"Insurance 3",policyNumber:POL-113,active:1}},{patientId:PAT-00114,name:"Patient 114",age:74,gender:M,bloodType:B+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-03,insurance{provider:"Insurance 4",policyNumber:POL-114,active:1}},{patientId:PAT-00115,name:"Patient 115",age:75,gender:F,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-04,insurance{provider:"Insurance 0",policyNumber:POL-115,active:1}},{patientId:PAT-00116,name:"Patient 116",age:76,gender:Other,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-05,insurance{provider:"Insurance 1",policyNumber:POL-116,active:1}},{patientId:PAT-00117,name:"Patient 117",age:77,gender:M,bloodType:O-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-06,insurance{provider:"Insurance 2",policyNumber:POL-117,active:1}},{patientId:PAT-00118,name:"Patient 118",age:78,gender:F,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-07,insurance{provider:"Insurance 3",policyNumber:POL-118,active:1}},{patientId:PAT-00119,name:"Patient 119",age:79,gender:Other,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-08,insurance{provider:"Insurance 4",policyNumber:POL-119,active:1}},{patientId:PAT-00120,name:"Patient 120",age:20,gender:M,bloodType:A+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-09,insurance{provider:"Insurance 0",policyNumber:POL-120,active:0}},{patientId:PAT-00121,name:"Patient 121",age:21,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-10,insurance{provider:"Insurance 1",policyNumber:POL-121,active:1}},{patientId:PAT-00122,name:"Patient 122",age:22,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-11,insurance{provider:"Insurance 2",policyNumber:POL-122,active:1}},{patientId:PAT-00123,name:"Patient 123",age:23,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-12,insurance{provider:"Insurance 3",policyNumber:POL-123,active:1}},{patientId:PAT-00124,name:"Patient 124",age:24,gender:F,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-13,insurance{provider:"Insurance 4",policyNumber:POL-124,active:1}},{patientId:PAT-00125,name:"Patient 125",age:25,gender:Other,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-14,insurance{provider:"Insurance 0",policyNumber:POL-125,active:1}},{patientId:PAT-00126,name:"Patient 126",age:26,gender:M,bloodType:AB+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-15,insurance{provider:"Insurance 1",policyNumber:POL-126,active:1}},{patientId:PAT-00127,name:"Patient 127",age:27,gender:F,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-16,insurance{provider:"Insurance 2",policyNumber:POL-127,active:1}},{patientId:PAT-00128,name:"Patient 128",age:28,gender:Other,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-17,insurance{provider:"Insurance 3",policyNumber:POL-128,active:1}},{patientId:PAT-00129,name:"Patient 129",age:29,gender:M,bloodType:A-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-18,insurance{provider:"Insurance 4",policyNumber:POL-129,active:1}},{patientId:PAT-00130,name:"Patient 130",age:30,gender:F,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-19,insurance{provider:"Insurance 0",policyNumber:POL-130,active:0}},{patientId:PAT-00131,name:"Patient 131",age:31,gender:Other,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-20,insurance{provider:"Insurance 1",policyNumber:POL-131,active:1}},{patientId:PAT-00132,name:"Patient 132",age:32,gender:M,bloodType:O+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-21,insurance{provider:"Insurance 2",policyNumber:POL-132,active:1}},{patientId:PAT-00133,name:"Patient 133",age:33,gender:F,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-22,insurance{provider:"Insurance 3",policyNumber:POL-133,active:1}},{patientId:PAT-00134,name:"Patient 134",age:34,gender:Other,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-23,insurance{provider:"Insurance 4",policyNumber:POL-134,active:1}},{patientId:PAT-00135,name:"Patient 135",age:35,gender:M,bloodType:AB-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-24,insurance{provider:"Insurance 0",policyNumber:POL-135,active:1}},{patientId:PAT-00136,name:"Patient 136",age:36,gender:F,bloodType:A+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-25,insurance{provider:"Insurance 1",policyNumber:POL-136,active:1}},{patientId:PAT-00137,name:"Patient 137",age:37,gender:Other,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-26,insurance{provider:"Insurance 2",policyNumber:POL-137,active:1}},{patientId:PAT-00138,name:"Patient 138",age:38,gender:M,bloodType:B+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-27,insurance{provider:"Insurance 3",policyNumber:POL-138,active:1}},{patientId:PAT-00139,name:"Patient 139",age:39,gender:F,bloodType:B-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-08-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-28,insurance{provider:"Insurance 4",policyNumber:POL-139,active:1}},{patientId:PAT-00140,name:"Patient 140",age:40,gender:Other,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-09-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-01,insurance{provider:"Insurance 0",policyNumber:POL-140,active:0}},{patientId:PAT-00141,name:"Patient 141",age:41,gender:M,bloodType:O-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-10-01,Moderate
+Diabetes,2021-10-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 1,2mg,Daily,lastVisit:2024-01-02,insurance{provider:"Insurance 1",policyNumber:POL-141,active:1}},{patientId:PAT-00142,name:"Patient 142",age:42,gender:F,bloodType:AB+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-11-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 2,3mg,Daily,lastVisit:2024-01-03,insurance{provider:"Insurance 2",policyNumber:POL-142,active:1}},{patientId:PAT-00143,name:"Patient 143",age:43,gender:Other,bloodType:AB-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-12-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 3,4mg,Daily,lastVisit:2024-01-04,insurance{provider:"Insurance 3",policyNumber:POL-143,active:1}},{patientId:PAT-00144,name:"Patient 144",age:44,gender:M,bloodType:A+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-01-01,Moderate
+Diabetes,2021-01-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 4,5mg,Daily,lastVisit:2024-01-05,insurance{provider:"Insurance 4",policyNumber:POL-144,active:1}},{patientId:PAT-00145,name:"Patient 145",age:45,gender:F,bloodType:A-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-02-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 5,1mg,Daily,lastVisit:2024-01-06,insurance{provider:"Insurance 0",policyNumber:POL-145,active:1}},{patientId:PAT-00146,name:"Patient 146",age:46,gender:Other,bloodType:B+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-03-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 6,2mg,Daily,lastVisit:2024-01-07,insurance{provider:"Insurance 1",policyNumber:POL-146,active:1}},{patientId:PAT-00147,name:"Patient 147",age:47,gender:M,bloodType:B-,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-04-01,Moderate
+Diabetes,2021-04-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 7,3mg,Daily,lastVisit:2024-01-08,insurance{provider:"Insurance 2",policyNumber:POL-147,active:1}},{patientId:PAT-00148,name:"Patient 148",age:48,gender:F,bloodType:O+,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-05-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 8,4mg,Daily,lastVisit:2024-01-09,insurance{provider:"Insurance 3",policyNumber:POL-148,active:1}},{patientId:PAT-00149,name:"Patient 149",age:49,gender:Other,bloodType:O-,conditions[1]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-06-01,Moderate,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 9,5mg,Daily,lastVisit:2024-01-10,insurance{provider:"Insurance 4",policyNumber:POL-149,active:1}},{patientId:PAT-00150,name:"Patient 150",age:50,gender:M,bloodType:AB+,conditions[2]{condition,diagnosed,severity}:
+condition,diagnosed,severity
+Hypertension,2020-07-01,Moderate
+Diabetes,2021-07-01,Mild,medications[1]{name,dosage,frequency}:
+name,dosage,frequency
+Medication 0,1mg,Daily,lastVisit:2024-01-11,insurance{provider:"Insurance 0",policyNumber:POL-150,active:0}}
