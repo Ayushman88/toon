@@ -6,7 +6,7 @@ This guide covers how to publish the TOON package to npm with modern best practi
 
 1. **npm account** - Create one at [npmjs.com](https://www.npmjs.com/signup)
 2. **Login to npm** - Run `npm login` in your terminal
-3. **Verify package name** - Ensure `@am/toon` is available (scoped packages require npm organization or your username)
+3. **Verify package name** - Ensure `@ayushmanmishra/toon` is available (scoped packages require npm organization or your username)
 
 ## Pre-Publishing Checklist
 
@@ -51,7 +51,7 @@ ls -la dist/
 ### 3. Verify package.json
 
 Ensure these fields are correct:
-- ✅ `name`: `@am/toon`
+- ✅ `name`: `@ayushmanmishra/toon`
 - ✅ `version`: Updated version number
 - ✅ `description`: Clear and descriptive
 - ✅ `author`: Your name/contact info
@@ -114,10 +114,10 @@ npm publish
 
 ### Step 4: Verify Publication
 
-1. Check npm: https://www.npmjs.com/package/@am/toon
+1. Check npm: https://www.npmjs.com/package/@ayushmanmishra/toon
 2. Test installation:
    ```bash
-   npm install @am/toon
+   npm install @ayushmanmishra/toon
    ```
 
 ## Post-Publishing
@@ -149,7 +149,7 @@ git push origin v1.0.0
 
 **Solution**: 
 - For scoped packages, ensure you own the npm organization/scope
-- Or publish as unscoped: change name from `@am/toon` to `toon` (if available)
+- Or publish as unscoped: change name from `@ayushmanmishra/toon` to `toon` (if available)
 
 ### Issue: "Package name already exists"
 
@@ -244,13 +244,13 @@ jobs:
 ⚠️ **Warning**: Only unpublish within 72 hours of publishing
 
 ```bash
-npm unpublish @am/toon@1.0.0
+npm unpublish @ayushmanmishra/toon@1.0.0
 ```
 
 After 72 hours, you must deprecate instead:
 
 ```bash
-npm deprecate @am/toon@1.0.0 "Use version 1.0.1 instead"
+npm deprecate @ayushmanmishra/toon@1.0.0 "Use version 1.0.1 instead"
 ```
 
 ## Resources

@@ -11,7 +11,7 @@ import { EncodeOptions } from './types';
  * 
  * @example
  * ```typescript
- * import { encode, forLLM } from '@am/toon';
+ * import { encode, forLLM } from '@ayushmanmishra/toon';
  * 
  * const data = { users: [{ id: 1, name: 'Alice' }] };
  * const toon = encode(data, forLLM);
@@ -33,7 +33,7 @@ export const forLLM: EncodeOptions = {
  * 
  * @example
  * ```typescript
- * import { encode, forLLMNested } from '@am/toon';
+ * import { encode, forLLMNested } from '@ayushmanmishra/toon';
  * 
  * const data = { 
  *   orders: [{ 
@@ -61,7 +61,7 @@ export const forLLMNested: EncodeOptions = {
  * 
  * @example
  * ```typescript
- * import { encode, forDebugging } from '@am/toon';
+ * import { encode, forDebugging } from '@ayushmanmishra/toon';
  * 
  * const data = { name: 'John', active: true };
  * const toon = encode(data, forDebugging);
@@ -83,7 +83,7 @@ export const forDebugging: EncodeOptions = {
  * 
  * @example
  * ```typescript
- * import { encode, forCompatibility } from '@am/toon';
+ * import { encode, forCompatibility } from '@ayushmanmishra/toon';
  * 
  * const data = { name: 'John', active: true };
  * const toon = encode(data, forCompatibility);

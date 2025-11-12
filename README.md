@@ -4,7 +4,7 @@
 
 **A compact, human-readable format designed for passing structured data to Large Language Models (LLMs)**
 
-[![npm version](https://img.shields.io/npm/v/@am/toon)](https://www.npmjs.com/package/@am/toon)
+[![npm version](https://img.shields.io/npm/v/@ayushmanmishra/toon)](https://www.npmjs.com/package/@ayushmanmishra/toon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **21.0% fewer tokens than JSON compact • 47.2% fewer than JSON • Best-in-class performance on complex nested data**
@@ -15,7 +15,7 @@
 
 ---
 
-> **Note**: This is an independent implementation of a TOON-like format. There is also an [official TOON format](https://github.com/toon-format/toon) with a different specification. This package (`@am/toon`) uses a different syntax optimized for different use cases.
+> **Note**: This is an independent implementation of a TOON-like format. There is also an [official TOON format](https://github.com/toon-format/toon) with a different specification. This package (`@ayushmanmishra/toon`) uses a different syntax optimized for different use cases.
 
 ## 🆕 What's New in v1.1.0
 
@@ -109,11 +109,11 @@ orders[1]{id,c_n}:
 
 ```typescript
 // Old way (still works)
-import { encode } from "@am/toon";
+import { encode } from "@ayushmanmishra/toon";
 const toon = encode(data);
 
 // New way (recommended)
-import { encode, forLLM } from "@am/toon";
+import { encode, forLLM } from "@ayushmanmishra/toon";
 const toon = encode(data, forLLM); // Better LLM context
 ```
 
@@ -202,13 +202,13 @@ Comprehensive testing across **5 real-world datasets** demonstrates TOON's super
 ### Installation
 
 ```bash
-npm install @am/toon
+npm install @ayushmanmishra/toon
 ```
 
 ### Basic Usage
 
 ```typescript
-import { encode, forLLM } from "@am/toon";
+import { encode, forLLM } from "@ayushmanmishra/toon";
 
 // Simple array
 const data = { tags: ["jazz", "chill", "lofi"] };
@@ -234,7 +234,7 @@ const toon = encode(users, forLLM);
 ### Real-World Example
 
 ```typescript
-import { encode, forLLM } from "@am/toon";
+import { encode, forLLM } from "@ayushmanmishra/toon";
 
 // GitHub repository data
 const repo = {
@@ -254,7 +254,12 @@ const toon = encode(repo, forLLM);
 TOON provides presets optimized for different scenarios:
 
 ```typescript
-import { encode, forLLM, forLLMNested, forDebugging } from "@am/toon";
+import {
+  encode,
+  forLLM,
+  forLLMNested,
+  forDebugging,
+} from "@ayushmanmishra/toon";
 
 // For LLM prompts (recommended default)
 const toon1 = encode(data, forLLM);
@@ -275,7 +280,7 @@ TOON is a **language-agnostic format specification**. While the official impleme
 ### Official Implementation
 
 - **JavaScript/TypeScript** (Node.js) - ✅ Available now
-  - npm: `@am/toon`
+  - npm: `@ayushmanmishra/toon`
   - Works in Node.js, browsers, and TypeScript projects
   - Supports both CommonJS and ES modules
 
@@ -360,7 +365,7 @@ TOON uses compact syntax to minimize token usage while maintaining readability:
 ### Encoding Options
 
 ```typescript
-import { encode, EncodeOptions } from "@am/toon";
+import { encode, EncodeOptions } from "@ayushmanmishra/toon";
 
 const options: EncodeOptions = {
   compactBooleans: true, // Use 1/0 instead of true/false (saves ~60% tokens)
@@ -501,7 +506,7 @@ Encodes any JSON-serializable value to TOON format.
 #### Examples
 
 ```typescript
-import { encode } from "@am/toon";
+import { encode } from "@ayushmanmishra/toon";
 
 // Basic encoding
 encode({ name: "John" });
@@ -713,6 +718,6 @@ TOON is designed with the goal of making LLM interactions more efficient and cos
 
 **Made with ❤️ for the LLM community**
 
-[Report Bug](https://github.com/Ayushman88/toon/issues) · [Request Feature](https://github.com/Ayushman88/toon/issues) · [Documentation](./spec/TOON.md) · [npm Package](https://www.npmjs.com/package/@am/toon)
+[Report Bug](https://github.com/Ayushman88/toon/issues) · [Request Feature](https://github.com/Ayushman88/toon/issues) · [Documentation](./spec/TOON.md) · [npm Package](https://www.npmjs.com/package/@ayushmanmishra/toon)
 
 </div>

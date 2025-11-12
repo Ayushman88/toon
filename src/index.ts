@@ -5,7 +5,7 @@
  * 
  * @example
  * ```typescript
- * import { encode, forLLM } from '@am/toon';
+ * import { encode, forLLM } from '@ayushmanmishra/toon';
  * 
  * // Simple usage
  * const data = { tags: ['jazz', 'chill', 'lofi'] };

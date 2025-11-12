@@ -1,5 +1,5 @@
 {
-  "name": "@am/toon",
+  "name": "@ayushmanmishra/toon",
   "version": "1.1.0",
   "description": "Token-Oriented Object Notation - A compact format for LLM prompts with ~50% fewer tokens than JSON. Optimized for OpenAI, Anthropic, and other LLM APIs.",
   "main": "dist/index.js",
