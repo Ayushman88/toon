@@ -17,7 +17,15 @@
 
 > **Note**: This is an independent implementation of a TOON-like format. There is also an [official TOON format](https://github.com/toon-format/toon) with a different specification. This package (`@ayushmanmishra/toon`) uses a different syntax optimized for different use cases.
 
-## 🆕 What's New in v1.1.0
+## 🆕 What's New in v1.1.0+
+
+### v1.1.1 (Latest)
+- 📝 Enhanced documentation with comprehensive "What's New" section
+- 📊 Updated benchmark numbers with verified results
+- 📖 Updated specification with tabular format and presets
+- 🔄 Package name reverted to `@ayushmanmishra/toon`
+
+### v1.1.0
 
 ### Major Features Added
 
