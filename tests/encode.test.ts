@@ -101,9 +101,9 @@ describe('encode', () => {
     test('array of objects', () => {
       const data = { users: [{ name: 'Alice', age: 25 }, { name: 'Bob', age: 30 }] };
       // Tabular format: uses tabs by default (best tokenization)
-      // When it's the only field, key prefix is skipped for maximum efficiency (matches CSV)
+      // Includes semantic header for LLM context: keyName[count]{fields}:
       // Tabs are shown as spaces in string representation but are actually \t characters
-      expect(encode(data)).toBe('name\tage\nAlice\t25\nBob\t30');
+      expect(encode(data)).toBe('users[2]{name,age}:\nAlice\t25\nBob\t30');
     });
 
     test('array of nested objects', () => {
