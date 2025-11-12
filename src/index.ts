@@ -5,13 +5,27 @@
  * 
  * @example
  * ```typescript
- * import { encode } from '@ayushmanmishra/toon';
+ * import { encode, forLLM } from '@am/toon';
  * 
+ * // Simple usage
  * const data = { tags: ['jazz', 'chill', 'lofi'] };
  * const toon = encode(data);
  * // Result: tags[3]: jazz,chill,lofi
+ * 
+ * // Optimized for LLM prompts
+ * const users = { users: [{ id: 1, name: 'Alice' }] };
+ * const toon = encode(users, forLLM);
+ * // Result: users[1]{id,name}:
+ * //         id      name
+ * //         1       Alice
  * ```
  */
 
 export { encode } from './encode';
 export type { EncodeOptions } from './types';
+export { 
+  forLLM, 
+  forLLMNested, 
+  forDebugging, 
+  forCompatibility 
+} from './presets';
