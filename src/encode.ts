@@ -230,8 +230,8 @@ function isUniformObjectArray(arr: unknown[]): {
 
 /**
  * Encodes a uniform array of objects in tabular format
- * ULTRA-COMPACT: Beat CSV by using pure CSV-like format with tabs
- * Format: field1\tfield2\nvalue1\tvalue2\nvalue3\tvalue4 (pure CSV-like, no overhead)
+ * Format: keyName[count]{field1,field2,...}:\nfield1\tfield2\nvalue1\tvalue2\nvalue3\tvalue4
+ * The keyName prefix is essential for LLM context - tells it what the data represents
  */
 function encodeTabularArray(
   arr: Record<string, unknown>[],
@@ -242,9 +242,8 @@ function encodeTabularArray(
   // ULTRA-OPTIMIZATION: Always use tabs (best tokenization, single token)
   const delimiter = options.delimiter !== undefined ? options.delimiter : '\t';
   
-  // ULTRA-OPTIMIZATION: Pure CSV-like format - no count, no brackets, no braces
-  // This matches CSV exactly for tabular data, but TOON can handle nested structures
-  const header = keys.join(delimiter);
+  // Build the data rows
+  const dataHeader = keys.join(delimiter);
   const rows = arr.map(obj => {
     const values = keys.map(key => {
       const value = obj[key];
@@ -267,8 +266,20 @@ function encodeTabularArray(
     return values.join(delimiter);
   });
   
-  // Pure CSV format: header\nrow1\nrow2 (no indentation, no count, no brackets)
-  return `${header}\n${rows.join('\n')}`;
+  // Build the semantic header: keyName[count]{field1,field2,...}:
+  // This is CRITICAL for LLM context - tells it what the data represents
+  let semanticHeader = '';
+  if (keyName) {
+    const keysList = keys.join(',');
+    semanticHeader = `${keyName}[${arr.length}]{${keysList}}:\n`;
+    // Skip dataHeader - semantic header already provides all context!
+    // Format: semanticHeader\nrow1\nrow2 (no redundant header row)
+    return `${semanticHeader}${rows.join('\n')}`;
+  }
+  
+  // If no keyName, include dataHeader for context
+  // Format: dataHeader\nrow1\nrow2
+  return `${dataHeader}\n${rows.join('\n')}`;
 }
 
 /**
@@ -364,21 +375,14 @@ function encodeObject(
 
     if (isArray(value)) {
       const arrayStr = encodeArray(value, key, options);
-      // For tabular format (CSV-like), optimize key prefix
-      // Check if it's tabular format (contains newlines and doesn't start with [count])
-      if (arrayStr.includes('\n') && !arrayStr.startsWith('[')) {
-        // ULTRA-OPTIMIZATION: Check if this is the only field in the object
-        // If it's the only field, we can skip the key prefix to match CSV exactly
-        const isOnlyField = entries.length === 1;
-        if (isOnlyField) {
-          // Root-level tabular array - no key prefix, pure CSV format
-          // This matches CSV exactly for single-field objects with tabular arrays
-          return arrayStr;
-        }
-        // Multiple fields - need key prefix for structure
-        // Format: key\nheader\nrow1\nrow2 (no colon, saves token)
-        return `${encodedKey}\n${arrayStr}`;
+      // For tabular format (CSV-like), the semantic header is already included
+      // Check if it's tabular format (contains newlines and has the semantic header format)
+      if (arrayStr.includes('\n') && arrayStr.includes('{') && arrayStr.includes('}:')) {
+        // Tabular format already includes keyName[count]{keys}: header
+        // Just return it as-is - the semantic context is preserved
+        return arrayStr;
       }
+      // Non-tabular array format
       return `${encodedKey}${arrayStr}`;
     } else if (isPlainObject(value)) {
       // Keep braces for nesting clarity - LLMs need this to understand structure
