@@ -69,6 +69,31 @@ users[2]: {name: Alice, age: 25}, {name: Bob, age: 30}
 { "users": [{ "name": "Alice", "age": 25 }, { "name": "Bob", "age": 30 }] }
 ```
 
+### Tabular Format (Arrays of Uniform Objects)
+
+For arrays of objects with the same structure, TOON uses a tabular format with semantic headers for optimal token efficiency and LLM context.
+
+**Syntax**: `keyName[count]{field1,field2,...}:\nfield1\tfield2\nvalue1\tvalue2\nvalue3\tvalue4`
+
+**Example**:
+```
+users[2]{id,name,role}:
+id      name    role
+1       Alice   admin
+2       Bob     user
+```
+
+**JSON Equivalent**:
+```json
+{ "users": [{ "id": 1, "name": "Alice", "role": "admin" }, { "id": 2, "name": "Bob", "role": "user" }] }
+```
+
+**Key Features**:
+- **Semantic Header**: `users[2]{id,name,role}:` provides context about data type, count, and fields
+- **Tab Delimiters**: Uses tabs (`\t`) for optimal tokenization (single token per delimiter)
+- **No Redundant Headers**: Semantic header eliminates need for separate header row in many cases
+- **LLM-Friendly**: Clear structure helps LLMs understand and parse the data efficiently
+
 ### Primitive Values
 
 #### Strings
@@ -151,7 +176,7 @@ config{}
 
 ### 1. Smart Quoting
 
-Quotes are only added when necessary. Strings containing spaces, colons, commas, or special characters are quoted.
+Quotes are only added when necessary. Strings containing spaces, colons, commas, or special characters are quoted. With tab delimiters, strings with spaces can remain unquoted (saves many tokens).
 
 **Optimization**: Saves ~2 tokens per unquoted string.
 
@@ -163,7 +188,7 @@ Use `1`/`0` instead of `true`/`false` in compact mode.
 
 ### 3. Compact Separators
 
-No spaces around separators. Use single-character separators.
+No spaces around separators. Use single-character separators. Tab delimiters (`\t`) tokenize as single tokens.
 
 **Optimization**: Saves 1 token per separator.
 
@@ -178,6 +203,18 @@ Array counts enable efficient parsing without trailing commas.
 Use `{` for nesting, avoid closing `}` when possible through context.
 
 **Optimization**: Reduces nesting syntax overhead.
+
+### 6. Tabular Format
+
+For uniform arrays of objects, use tabular format with semantic headers.
+
+**Optimization**: Eliminates redundant key names, uses efficient tab delimiters, provides LLM context.
+
+### 7. Flattening (Optional)
+
+Nested structures can be flattened into tabular format with shortened keys.
+
+**Optimization**: Converts nested objects to flat columns (e.g., `customer.name` → `c_n`), achieving 29.6% better than JSON compact on nested data.
 
 ## Comparison with JSON
 
@@ -258,13 +295,44 @@ Use `{` for nesting, avoid closing `}` when possible through context.
 - Support arrays with mixed types
 - Support objects with mixed value types
 
+## Encoding Presets
+
+TOON provides preset configurations optimized for different use cases:
+
+### `forLLM` (Recommended Default)
+- Compact booleans (`1`/`0`)
+- Compact null (`~`)
+- Tab delimiters
+- Tabular format enabled
+- **Use case**: Maximum token efficiency for LLM prompts
+
+### `forLLMNested`
+- Same as `forLLM` plus flattening enabled
+- **Use case**: Complex nested structures (orders, transactions)
+- **Performance**: 29.6% better than JSON compact on nested data
+
+### `forDebugging`
+- Standard booleans (`true`/`false`)
+- Standard null (`null`)
+- Comma delimiters
+- Readable mode (spaces added)
+- **Use case**: Human-readable debugging output
+
+### `forCompatibility`
+- Standard booleans and null
+- Comma delimiters
+- No spaces
+- **Use case**: Balance between efficiency and JSON-like compatibility
+
 ## Implementation Notes
 
 - TOON is designed for one-way encoding (JSON → TOON)
 - Decoding is not a primary use case (LLMs can parse TOON)
 - Focus on compact representation for LLM prompts
 - Maintain readability for human verification
+- Tabular format automatically used for uniform arrays of objects
+- Semantic headers provide essential context for LLM understanding
 
 ## Version
 
-This specification is version 1.0.0.
+This specification is version 1.1.0.
