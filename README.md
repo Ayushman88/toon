@@ -20,6 +20,7 @@
 ## 🆕 What's New in v1.1.0+
 
 ### v1.1.1 (Latest)
+
 - 📝 Enhanced documentation with comprehensive "What's New" section
 - 📊 Updated benchmark numbers with verified results
 - 📖 Updated specification with tabular format and presets
